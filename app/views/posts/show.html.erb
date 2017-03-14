@@ -1,0 +1,30 @@
+<div id="titre"><h1>Article : <%= @post.title %></h1></div>
+
+<p class="notice"><%= notice %></p>
+ 
+<div id="item">
+<p>
+  <div id="titre"><h2>Pseudo</h2></div>
+  <%= @post.name %>
+</p>
+<p>
+  <div id="titre"><h2>Contenu</h2></div>
+  <%= @post.content %>
+</p>
+</div>
+
+
+<div id="item">
+	<div id="titre"><h2>Commentaires</h2></div>
+		<%= render @post.comments %>
+	</div>
+ 
+<div id="item">
+	<div id="titre"><h2>Ajouter un commentaire</h2></div>
+		<%= render "comments/form" %>
+	</div>
+ 
+<br />
+ 
+<div class="buttonFb"><%= link_to 'Modifier Post', edit_post_path(@post) %></div>
+<div class="buttonFb"><%= link_to 'Retour', posts_path %></div>

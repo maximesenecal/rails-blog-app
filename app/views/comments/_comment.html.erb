@@ -1,0 +1,14 @@
+<p>
+  <b>Pseudo:</b>
+  <%= comment.commenter %>
+</p>
+ 
+<p>
+  <%= comment.body %>
+</p>
+
+<div class="buttonFb"><p>
+  <%= link_to 'Supprimer le commentaire', [comment.post, comment],
+ 	 :confirm => 'Etes vous sur?',
+ 	 :method => :delete %>
+</p></div>
